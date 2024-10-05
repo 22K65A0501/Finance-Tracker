@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #F1F8FF;
+    color: #333;
+    padding: 0px;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #002147; 
+    color: #FFD54F; 
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+header .logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #FFD54F; 
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #FFD54F;
+    color: #002147; 
+    border-radius: 5px;
+}
+
+main {
+    max-width: 1200px;
+    width: 80%;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1; 
+}
+
+main section {
+    display: none; 
+}
+
+section.active {
+    display: block;
+}
+
+#dashboard .overview {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+}
+
+#dashboard .overview div {
+    padding: 20px;
+    background-color: #FFD54F; 
+    color: #002147; 
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#dashboard canvas {
+    margin-top: 30px;
+}
+
+.transaction-list {
+    margin-top: 30px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.transaction-list th, .transaction-list td {
+    padding: 30px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.transaction-list th {
+    background-color: #002147; 
+    color: #FFD54F; 
+}
+
+.transaction-list td.income {
+    color: #4CAF50; 
+}
+
+.transaction-list td.expense {
+    color: #F44336; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form select, form button {
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form input, form select {
+    width: 100%; 
+}
+
+form button {
+    background-color: #FFD54F; 
+    color: #002147; 
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #FFC107; 
+}
+
+.success-message {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    display: none;
+}
+
+footer {
+    background-color: #002147; 
+    color: #FFD54F; 
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px; 
+    margin-top: 20px;
+    width: 100%; 
+    position: relative; 
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    header, footer {
+        font-size: 14px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #dashboard .overview {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #dashboard .overview div {
+        width: 100%;
+    }
+}
